@@ -2,7 +2,7 @@
 
 A simple app where you have to select the name of the pokemon that hides behind the black silhouette.
 
-![App pokemon](/images/pokemon.png)
+![App pokemon](public/images/pokemon.png)
 
 ## Technologies
 
