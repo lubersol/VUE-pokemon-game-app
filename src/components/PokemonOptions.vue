@@ -20,11 +20,7 @@ export default {
       required: true,
     },
   },
-  methods: {
-    hola() {
-      //this.$emit()
-    },
-  },
+  methods: {},
 };
 </script>
 

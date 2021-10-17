@@ -4,6 +4,10 @@ A simple app where you have to select the name of the pokemon that hides behind 
 
 ![App pokemon](public/images/pokemon.png)
 
+## Link to Pokemon Game app
+
+https://vue-pokemon-api.netlify.app/
+
 ## Technologies
 
 **VUE, CSS**
