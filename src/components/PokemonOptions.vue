@@ -1,16 +1,31 @@
 <template>
   <div class="options-container">
-    <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
+    <ul class="options-list">
+      <li
+        v-for="pokemon in pokemons"
+        :key="pokemon.id"
+        @click="$emit('selectionPokemon', pokemon.id)"
+      >
+        {{ pokemon.name }}
+      </li>
     </ul>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    pokemons: {
+      type: Array,
+      required: true,
+    },
+  },
+  methods: {
+    hola() {
+      //this.$emit()
+    },
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -29,11 +44,17 @@ li {
 }
 
 li:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #b5e7a0;
 }
 
 .options-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.options-list {
+  align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 </style>

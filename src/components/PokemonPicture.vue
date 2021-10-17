@@ -30,12 +30,15 @@ export default {
 <style scoped>
 /* Pokemon Picture */
 .pokemon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 200px;
+  width: 100%;
 }
 img {
   height: 200px;
   position: absolute;
-  right: 32%;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
