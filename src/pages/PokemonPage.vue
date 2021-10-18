@@ -32,8 +32,6 @@ export default {
       showAnswer: false,
       message: "",
       isError: false,
-      // activeClass: "active",
-      // errorClass: "danger",
     };
   },
   methods: {
