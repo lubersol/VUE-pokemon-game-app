@@ -6,7 +6,7 @@
     <pokemonOptions :pokemons="pokemonArr" @selectionPokemon="checkAnswer" />
 
     <div v-if="showAnswer">
-      <h2 class="fade-in" :class="{ 'text-danger': hasError }">
+      <h2 class="fade-in" :class="isError && 'danger'">
         {{ message }}
       </h2>
       <button class="boton-jugar" @click="newGame">Jugar</button>
@@ -31,8 +31,9 @@ export default {
       showPokemon: false,
       showAnswer: false,
       message: "",
-      hasError: false,
-      "text-danger": false,
+      isError: false,
+      // activeClass: "active",
+      // errorClass: "danger",
     };
   },
   methods: {
@@ -49,10 +50,10 @@ export default {
 
       if (selectedId === this.pokemon.id) {
         this.message = `Correcto!, es ${this.pokemon.name}!`;
+        this.isError = false;
       } else {
-        this.message = `Ooops!, era ${
-          this.pokemon.name
-        } ${(this.hasError = true)}`;
+        this.message = `Ooops!, era ${this.pokemon.name}`;
+        this.isError = true;
       }
     },
     newGame() {
@@ -87,7 +88,7 @@ export default {
   background-color: green;
   color: white;
 }
-.text-danger {
+.danger {
   color: red;
 }
 </style>
